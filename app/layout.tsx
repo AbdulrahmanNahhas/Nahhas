@@ -4,9 +4,11 @@ import { Metadata } from "next"
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
-import { SiteHeader } from "@/components/site-header"
+import MainContextMenu from "@/components/MainContextMenu"
+import { SiteHeader } from "@/components/navbar/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
+import Footer from "@/components/footer/footer"
 
 export const metadata: Metadata = {
   title: {
@@ -20,8 +22,8 @@ export const metadata: Metadata = {
   ],
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 }
 
@@ -41,11 +43,17 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="relative flex min-h-screen flex-col">
-              <SiteHeader />
-              <div className="flex-1">{children}</div>
-            </div>
-            <TailwindIndicator />
+            <MainContextMenu>
+              {/* Place Everything Here */}
+          <div className="bg"></div>
+                <SiteHeader />
+              <div className="relative flex min-h-screen flex-col">
+                <div className="flex-1">{children}</div>
+                <TailwindIndicator />
+              </div>
+              <Footer />
+              {/* Place Everything top */}
+            </MainContextMenu>
           </ThemeProvider>
         </body>
       </html>
