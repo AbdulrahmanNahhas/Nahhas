@@ -101,25 +101,25 @@
 .bg::after {
   z-index: -5;
   background-image: url("/Grid.svg");
-  opacity: 0.03;
+  opacity: 0.075;
   filter: invert(0);
 }
 .dark .bg::after {
-  opacity: 0.07;
+  opacity: 0.1;
   filter: invert(1);
 }
 .bg::before {
   z-index: -3;
   background: radial-gradient(
     circle,
-    hsl(var(--primary) / 0.1) 0,
+    hsl(var(--primary) / 0.2) 0,
     hsl(var(--background)) 100%
   );
 }
 .dark .bg::before {
   background: radial-gradient(
     circle,
-    hsl(var(--primary) / 0.15) 0,
+    hsl(var(--primary) / 0.25) 0,
     hsl(var(--background)) 100%
   );
 }
