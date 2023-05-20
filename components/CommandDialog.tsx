@@ -6,7 +6,7 @@ import {
   BarChart3,
   Home,
   Info,
-  FileIcon,
+  Folder,
   MessageSquare,
   Newspaper,
   Palette,
@@ -32,7 +32,7 @@ const PagesIcons = [
   Home,
   Info,
   BarChart3,
-  FileIcon,
+  Folder,
   MessageSquare,
   Newspaper,
 ]
@@ -79,11 +79,11 @@ export function CommandsDialog() {
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Pages">
             {siteConfig.pages.map((Page, index) => {
-              const Icon = PagesIcons[index]
+              const ICON = PagesIcons[index]
               return (
                 <Link href={Page.href} key={index}>
                   <CommandItem>
-                    <Icon className="mr-2 h-4 w-4" />
+                    <ICON className="mr-2 h-4 w-4" />
                     <span>{Page.title}</span>
                   </CommandItem>
                 </Link>
