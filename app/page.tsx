@@ -1,9 +1,8 @@
-import Image from "next/image"
 import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { buttonVariants } from "@/components/ui/button"
-import ClientsComponent from "@/components/ClientsComponent"
+
 import TeamComponent from "@/components/TeamComponent"
 import ServicesComponent from "@/components/ServicesComponent"
 import ProjectsComponent from "@/components/ProjectsComponent"

@@ -3,6 +3,7 @@ export const siteConfig = {
   name: "Nahhas",
   description:
     "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    projecturl: "https://github.com/AbdulrahmanNahhas/Nahhas",
   // Change Pages Icons in ./components/CommandDialog.tsx
   pages: [
     {

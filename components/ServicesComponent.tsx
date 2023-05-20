@@ -2,7 +2,6 @@ import Link from "next/link"
 import { AlarmClock, BellRing, Check } from "lucide-react"
 
 import { siteConfig } from "@/config/site"
-import { cn } from "@/lib/utils"
 import { Button, buttonVariants } from "@/components/ui/button"
 import {
   Card,
@@ -12,8 +11,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { ToastAction } from "@/components/ui/toast"
-import { useToast } from "@/components/ui/use-toast"
 
 function ServicesComponent() {
   return (
@@ -24,11 +21,6 @@ function ServicesComponent() {
       <div
         className="text-start gap-5"
         id="grid"
-        style={{
-            '--how-many-cards': siteConfig.Services.services.length < 3
-              ? `${siteConfig.Services.services.length + 1}`
-              : `${siteConfig.Services.services.length}`
-          }}
       >
         {" "}
         {siteConfig.Services.services.map((service, index) => (

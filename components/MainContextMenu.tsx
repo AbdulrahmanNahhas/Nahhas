@@ -32,7 +32,6 @@ const MainContextMenu = ({ children }: MainContextMenuProps) => {
       <ContextMenuTrigger>{children}</ContextMenuTrigger>
       <ContextMenuContent className="w-64">
         <ContextMenuItem
-          
           onClick={() => {
             router.back()
           }}
@@ -41,7 +40,6 @@ const MainContextMenu = ({ children }: MainContextMenuProps) => {
           <ContextMenuShortcut>⌘[</ContextMenuShortcut>
         </ContextMenuItem>
         <ContextMenuItem
-          
           onClick={() => {
             router.forward()
           }}
@@ -50,7 +48,6 @@ const MainContextMenu = ({ children }: MainContextMenuProps) => {
           <ContextMenuShortcut>⌘]</ContextMenuShortcut>
         </ContextMenuItem>
         <ContextMenuItem
-          
           onClick={() => {
             router.refresh()
           }}
@@ -70,22 +67,27 @@ const MainContextMenu = ({ children }: MainContextMenuProps) => {
           </ContextMenuSubContent>
         </ContextMenuSub>
         <ContextMenuSub>
-          <ContextMenuSubTrigger disabled className="opacity-50">Change Language</ContextMenuSubTrigger>
+          <ContextMenuSubTrigger disabled className="opacity-50">
+            Change Language
+          </ContextMenuSubTrigger>
           <ContextMenuSubContent className="w-48">
-              <Link href="/">
-                <ContextMenuItem>EN</ContextMenuItem>
-              </Link>
-              <Link href="/">
-                <ContextMenuItem>AR</ContextMenuItem>
-              </Link>
+            <Link href="/">
+              <ContextMenuItem>EN</ContextMenuItem>
+            </Link>
+            <Link href="/">
+              <ContextMenuItem>AR</ContextMenuItem>
+            </Link>
           </ContextMenuSubContent>
         </ContextMenuSub>
-        <ContextMenuItem disabled>Website Source</ContextMenuItem>
+        <ContextMenuItem>
+          <Link href={siteConfig.projecturl}>Website Source</Link>
+        </ContextMenuItem>
         <ContextMenuSeparator />
-        <ContextMenuRadioGroup value="Abdulrahman Nahhas" className="text-center opacity-50">
-          <ContextMenuLabel>
-            Made by: Abdulrahman Nahhas
-          </ContextMenuLabel>
+        <ContextMenuRadioGroup
+          value="Abdulrahman Nahhas"
+          className="text-center opacity-50"
+        >
+          <ContextMenuLabel>Made by: Abdulrahman Nahhas</ContextMenuLabel>
         </ContextMenuRadioGroup>
       </ContextMenuContent>
     </ContextMenu>
