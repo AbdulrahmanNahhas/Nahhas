@@ -146,3 +146,46 @@
   justify-content: center;
   align-items: stretch; /* Align items to the top */
 }
+
+
+.ChangeLOG__New__Features,
+.ChangeLOG__Improvment,
+.ChangeLOG__Bugs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.ChangeLOG__New__Features .ul {
+  margin-top: 5px;
+}
+.ChangeLOG__New__Features * {
+  border-color: #86c1a1;
+}
+.ChangeLOG__New__Features svg {
+  color: #86c1a1 !important;
+  fill: #86c1a1 !important;
+}
+.ChangeLog .description {
+  margin-left: 28px;
+}
+
+.ChangeLOG__New__Features .card svg {
+  color: #86c1a1 !important;
+  fill: none !important;
+}
+
+.ChangeLOG__Improvment * {
+  border-color: #e59761;
+}
+.ChangeLOG__Improvment svg {
+  color: #e59761 !important;
+}
+
+.ChangeLOG__Bugs svg {
+  color: #e56161 !important;
+  fill: #e56161 !important;
+}
+.ChangeLOG__Bugs * {
+  border-color: #e56161;
+}

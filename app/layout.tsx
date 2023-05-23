@@ -43,7 +43,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <MainContextMenu>
               {/* Place Everything Here */}
           <div className="bg"></div>
                 <SiteHeader />
@@ -53,6 +52,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               </div>
               <Footer />
               {/* Place Everything top */}
+            <MainContextMenu>
             </MainContextMenu>
           </ThemeProvider>
         </body>

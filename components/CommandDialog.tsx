@@ -42,8 +42,8 @@ export function CommandsDialog() {
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
-      if ((e.key.toLowerCase() === "h" && e.metaKey)) {
-        setOpen((open) => !open)
+      if ((e.key.toLowerCase() === "h" && (e.metaKey || e.ctrlKey))) {
+        setOpen((open) => !open);
       }
     }
 
@@ -92,13 +92,13 @@ export function CommandsDialog() {
           </CommandGroup>
           <CommandSeparator />
           <CommandGroup heading="Settings">
-            <CommandItem className="opacity-10 animate-pulse">
+            <CommandItem className="opacity-50 cursor-not-allowed">
               <User className="mr-2 h-4 w-4" />
               <span>Profile</span>
               <CommandShortcut>⌘P</CommandShortcut>
             </CommandItem>
             <CommandItem
-              className="opacity-10 animate-pulse"
+              className="opacity-50 cursor-not-allowed"
               style={{ animationDelay: "150ms" }}
             >
               <Palette className="mr-2 h-4 w-4" />
@@ -106,7 +106,7 @@ export function CommandsDialog() {
               <CommandShortcut>⌘T</CommandShortcut>
             </CommandItem>
             <CommandItem
-              className="opacity-10 animate-pulse"
+              className="opacity-50 cursor-not-allowed"
               style={{ animationDelay: "300ms" }}
             >
               <Settings className="mr-2 h-4 w-4" />

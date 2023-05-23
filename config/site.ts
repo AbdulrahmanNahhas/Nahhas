@@ -2,7 +2,7 @@ export type SiteConfig = typeof siteConfig
 export const siteConfig = {
   name: "Nahhas",
   description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    "Hello, I'm Abdulrahman Nahhas, Full-Stack developmer. Welcome to my website!",
     projecturl: "https://github.com/AbdulrahmanNahhas/Nahhas",
   // Change Pages Icons in ./components/CommandDialog.tsx
   pages: [
@@ -23,12 +23,16 @@ export const siteConfig = {
     {
       title: "Blog",
       href: "/blog",
-      comingSoon: true,
+      comingSoon: false,
     },
     {
       title: "Contact Us",
       href: "/contact-us",
       comingSoon: true,
+    },
+    {
+      title: "Change log",
+      href: "/changelog",
     },
   ],
   projects: [
@@ -66,7 +70,7 @@ export const siteConfig = {
   links: {
     twitter: "https://twitter.com/Nahhas909",
     github: "https://github.com/AbdulrahmanNahhas",
-    projects: "https://ui.shadcn.com",
+    projects: "#",
   },
 
   // Home Page
@@ -74,10 +78,10 @@ export const siteConfig = {
     title: "Abdulrahman Nahhas",
     subTitle: "",
     description:
-      "Hi, I'm Abdulrahman nahhas, I still a student but you can say I'm a small Full-Stack developer, you are welcome to my website if you want you can go to projects page and see all my projects. or you can go to my github account. thank you! and bye.",
+      "Hello, I'm Abdulrahman Nahhas, a student with a passion for Full-Stack development. Welcome to my website! Feel free to explore the projects page to check out all of my creations. Alternatively, you can also visit my GitHub account for more of my work. Thank you for visiting, and have a great day! Goodbye!",
   },
 
-  // Services Page
+  // Services Component
   Services: {
     title: "Services",
     services: [
