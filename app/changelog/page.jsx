@@ -1,6 +1,5 @@
 import { changeLog } from "@/config/changelog";
 import { Bug, Paintbrush, Smile, Star } from "lucide-react";
-import React from "react";
 
 const page = () => {
   return (
@@ -10,12 +9,12 @@ const page = () => {
         <ul
           aria-label="Changelog feed"
           role="feed"
-          className="relative flex flex-col gap-12 py-12 pl-6 before:absolute before:top-0 before:left-6 before:h-full before:-translate-x-1/2 before:border before:border-dashed before:border-slate-200 after:absolute after:top-6 after:left-6 after:bottom-6 after:-translate-x-1/2 after:border after:border-slate-200 "
+          className="relative flex flex-col-reverse gap-12 py-12 pl-6"
         >
           {changeLog.map((changed) => (
-            <li role="article" className="relative mb-10">
-              <div className="flex flex-col md:flex-row gap-5 md:gap-10">
-                <span className="flex-auto font-semibold text-primary w-[200px] text-2xl text-center md:text-start">
+            <li className="mb-10">
+              <div className="flex flex-col  md:flex-row gap-5 md:gap-10">
+                <span className="flex-auto font-semibold text-primary w-full md:w-[200px] text-2xl text-center md:text-start">
                   {changed.date}
                 </span>
                 <div className="flex flex-col gap-6 bg-background/75 backdrop-blur border-2 p-6 rounded-lg ChangeLog">

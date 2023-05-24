@@ -189,3 +189,18 @@
 .ChangeLOG__Bugs * {
   border-color: #e56161;
 }
+
+/* Tailwindcss Not Working */
+@media (min-width: 768px) {
+  .md\:flex-row {
+      flex-direction: row;
+  }
+}
+@media (min-width: 768px) {
+  .md\:w-\[200px\] {
+      width: 200px;
+  }
+}
+.mb-10 {
+  margin-bottom: 2.5rem/* 40px */;
+}
