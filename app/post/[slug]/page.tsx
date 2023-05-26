@@ -15,18 +15,23 @@ export const generateStaticParams = async () => {
   const posts = getPostMetadata();
   return posts.map((post) => ({
     slug: post.slug,
-  }))
-}
+  }));
+};
 
 function page(props: any) {
   const slug = props.params.slug;
   const post = getPostContent(slug);
+  console.log(post.data.hidden);
 
   return (
     <div className="bg-background/10 backdrop-blur">
-      <div className="prose lg:prose-xl mx-auto dark:prose-invert py-10 prose-img:rounded-lg">
-        <h1>{post.data.title}</h1>
-        <Markdown>{post.content}</Markdown>
+      <div className="prose lg:prose-xl mx-auto dark:prose-invert py-10 prose-img:rounded-lg prose-img:border min-h-screen">
+        <h1 className="text-center">{post.data.title}</h1>
+        {post.data.hidden == true ? (
+          <h3 className="text-center">Coming Soon...</h3>
+        ) : (
+          <Markdown>{post.content}</Markdown>
+        )}
       </div>
     </div>
   );

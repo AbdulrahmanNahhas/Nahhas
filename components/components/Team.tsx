@@ -1,4 +1,4 @@
-import { Icons } from "../icons";
+"use client"
 import { buttonVariants } from "../ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
 import { teamConfig } from "@/config/team";
@@ -6,11 +6,13 @@ import { cn } from "@/lib/utils";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
-// import Me from "/Profile_Pictures/Me.png"
-
 function TeamComponent() {
+  const name = usePathname();
+  console.log(name);
+
   return (
     <>
       {/* Team */}
@@ -20,9 +22,10 @@ function TeamComponent() {
       >
         {/* Title */}
         <div className="max-w-2xl mx-auto text-center mb-6 lg:mb-8">
-          <h2 className="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">
-            Our Team
-          </h2>
+          <Link 
+          href={`${name}#team`} className="text-2xl font-bold md:text-4xl md:leading-tight hash_parent Section__Title">
+          <span className="hash">#</span>Our Team
+          </Link>
           <p className="mt-1 text-gray-600 dark:text-gray-400">
             Creative people
           </p>
@@ -35,7 +38,7 @@ function TeamComponent() {
               id="card"
               className="flex flex-col p-4 md:p-6 border rounded-lg"
             >
-              <CardHeader>
+              <CardHeader className="p-0">
                 <div className="flex gap-4 justify-center items-center">
                   <div
                     id="image_border"
@@ -59,11 +62,11 @@ function TeamComponent() {
                   </div>
                 </div>
               </CardHeader>
-              <CardContent>
+              <CardContent className="p-0">
                 <p className="mt-3 text-gray-500">{profile.description}</p>
               </CardContent>
               {/* Social Brands */}
-              <CardFooter className="mt-3 space-x-1">
+              <CardFooter className="mt-3 space-x-1 p-0">
                 {profile.links.github ? (
                   <Link
                     target="_blank"

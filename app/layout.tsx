@@ -1,14 +1,13 @@
-import "@/styles/globals.css"
-import { Metadata } from "next"
-
-import { siteConfig } from "@/config/site"
-import { fontSans } from "@/lib/fonts"
-import { cn } from "@/lib/utils"
-import MainContextMenu from "@/components/MainContextMenu"
-import { SiteHeader } from "@/components/navbar/site-header"
-import { TailwindIndicator } from "@/components/tailwind-indicator"
-import { ThemeProvider } from "@/components/theme-provider"
-import Footer from "@/components/footer/footer"
+import "@/styles/globals.css";
+import MainContextMenu from "@/components/MainContextMenu";
+import Footer from "@/components/footer/footer";
+import { SiteHeader } from "@/components/navbar/site-header";
+import { TailwindIndicator } from "@/components/tailwind-indicator";
+import { ThemeProvider } from "@/components/theme-provider";
+import { siteConfig } from "@/config/site";
+import { fontSans } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
@@ -25,10 +24,10 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
   },
-}
+};
 
 interface RootLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
@@ -43,20 +42,22 @@ export default function RootLayout({ children }: RootLayoutProps) {
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-              {/* Place Everything Here */}
-          <div className="bg"></div>
-                <SiteHeader />
-              <div className="relative flex min-h-screen flex-col">
-                <div className="flex-1">{children}</div>
-                <TailwindIndicator />
+            {/* Place Everything Here */}
+            <div className="bg"></div>
+            <div className="bg2"></div>
+            <SiteHeader />
+            <div className="relative flex min-h-screen flex-col">
+              <div className="flex-1 min-h-[calc(100vh-69px-65px)]">
+                {children}
               </div>
-              <Footer />
-              {/* Place Everything top */}
-            <MainContextMenu>
-            </MainContextMenu>
+              <TailwindIndicator />
+            </div>
+            <Footer />
+            {/* Place Everything top */}
+            <MainContextMenu></MainContextMenu>
           </ThemeProvider>
         </body>
       </html>
     </>
-  )
+  );
 }

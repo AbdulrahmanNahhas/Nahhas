@@ -1,8 +1,9 @@
 --- 
 title: "Telegram VS. Whatsapp"
-subtitle: "WhatsApp vs. Telegram: Which messaging app is better?"
+subtitle: "WhatsApp vs. Telegram: Which messaging app is better? And why?"
 date: "2023-5-23"
 tags: ["Social Media", "Telegram", "Whatsapp"]
+hidden: true
 ---
 
 When we think of instant messaging, [WhatsApp](https://www.digitaltrends.com/mobile/what-is-whatsapp/) and [Telegram](https://www.digitaltrends.com/social-media/what-telegram/) are the first apps that come to mind. From sending unlimited free messages to sharing various forms of media, WhatsApp and Telegram offer instant access to online communication tools that anyone can access from anywhere. 

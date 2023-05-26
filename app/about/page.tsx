@@ -1,16 +1,13 @@
-import Link from "next/link"
+import Faq from "@/components/components/Faq";
+import Stats from "@/components/components/Stats";
+import TeamComponent from "@/components/components/Team";
+import TimeLine from "@/components/components/TimeLine";
+import { buttonVariants } from "@/components/ui/button";
+import { siteConfig } from "@/config/site";
+import Link from "next/link";
+import React from "react";
 
-import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
-
-import TeamComponent from "@/components/components/Team"
-import ServicesComponent from "@/components/components/Services"
-import ProjectsComponent from "@/components/components/Projects"
-import ClientsComponent from "@/components/components/Clients"
-import Blog from "@/components/components/Blog"
-import Faq from "@/components/components/Faq"
-
-export default function IndexPage() {
+const page = () => {
   return (
     <section className="px-4 sm:container">
       <div className="flex w-full flex-col items-center gap-2 sm:gap-5 py-10 md:py-20 lg:py-32 2xl:py-40">
@@ -56,11 +53,12 @@ export default function IndexPage() {
           To open commands modal
         </p>
       </div>
-      {/* <ClientsComponent /> */}
-      <ServicesComponent />
-      {/* <ProjectsComponent /> */}
-      <Blog />
+      <TimeLine />
+      <Stats />
+      <TeamComponent />
       <Faq />
     </section>
-  )
-}
+  );
+};
+
+export default page;

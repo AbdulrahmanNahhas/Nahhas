@@ -24,6 +24,7 @@ module.exports = {
           focus: "hsl(var(--primary-focus))",
           content: "hsl(var(--primary-content))",
           foreground: "hsl(var(--primary-foreground))",
+          dark: "hsl(var(--primary-dark))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",

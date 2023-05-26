@@ -24,6 +24,7 @@
 
     --primary: 198.87 88.18% 43.14%;
     --primary-focus: 201 67% 32%;
+    --primary-dark: 198.87deg 88.43% 28.73%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -64,6 +65,7 @@
 
     --primary: 198.87 88.18% 43.14%;
     --primary-focus: 201 67% 32%;
+    --primary-dark: 201deg 100% 17.55%;
     --primary-foreground: 222.2 47.4% 1.2%;
 
     --secondary: 222.2 47.4% 11.2%;
@@ -89,14 +91,15 @@
 }
 
 .bg:after,
-.bg:before {
-  position: fixed;
+.bg:before,
+.bg2::before {
+  content: "";
+  position: absolute;
   top: 0;
   right: 0;
-  content: "";
   width: 100%;
+  z-index: -5;
   height: 100%;
-  top: 0;
 }
 .bg::after {
   z-index: -5;
@@ -104,12 +107,24 @@
   opacity: 0.075;
   filter: invert(0);
 }
+.bg2::before {
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    transparent,
+    hsl(var(--background))
+  );
+  /* z-index: -3; */
+  z-index: -4;
+}
 .dark .bg::after {
   opacity: 0.1;
   filter: invert(1);
 }
 .bg::before {
-  z-index: -3;
+  position: absolute;
+  z-index: -4;
+  /* z-index: -3; */
   background: radial-gradient(
     circle,
     hsl(var(--primary) / 0.2) 0,
@@ -136,8 +151,12 @@
 .dark .outline-btn {
   border-color: #374151 !important;
 }
+.light .outline-btn {
+  border-color: #b3c4cd;
+}
 .light .outline-btn:hover {
-  background-color: #e2e8f0 !important;
+  backdrop-filter: blur(0.75px);
+  background-color: #e2e8f09c !important;
 }
 
 #services #grid {
@@ -146,7 +165,6 @@
   justify-content: center;
   align-items: stretch; /* Align items to the top */
 }
-
 
 .ChangeLOG__New__Features,
 .ChangeLOG__Improvment,
@@ -193,14 +211,135 @@
 /* Tailwindcss Not Working */
 @media (min-width: 768px) {
   .md\:flex-row {
-      flex-direction: row;
+    flex-direction: row;
   }
 }
 @media (min-width: 768px) {
   .md\:w-\[200px\] {
-      width: 200px;
+    width: 200px;
   }
 }
 .mb-10 {
-  margin-bottom: 2.5rem/* 40px */;
+  margin-bottom: 2.5rem /* 40px */;
+}
+
+* {
+  scroll-behavior: smooth !important;
+}
+
+.hash {
+  display: none;
+}
+.hash_parent:hover .hash {
+  display: inline;
+}
+
+.onOpenBeCard[data-state="open"] > button:hover {
+  background-color: transparent;
+}
+.onOpenBeCard[data-state="open"] {
+  @apply bg-card/50 border backdrop-blur rounded-lg;
+}
+.onOpenBeCard[data-state="open"] > button {
+  @apply font-semibold pt-3 text-start;
+}
+.onOpenBeCard svg {
+  transition: all 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.onOpenBeCard[data-state="open"] svg {
+  rotate: 180deg;
+}
+.onOpenBeCard[data-state="open"] > div {
+  @apply px-5 py-3 pt-1 text-start;
+}
+
+.light .Section__Title {
+  color: #e2e8f0;
+  position: relative;
+  top: 18px;
+  z-index: 1;
+}
+.dark .Section__Title {
+  color: #3a3f47;
+  position: relative;
+  top: 18px;
+  z-index: 1;
+}
+
+.Section__Title ~ p {
+  z-index: 3;
+  position: relative;
+}
+
+/* Rainbow (Gradient) Shadow */
+.rainbow__shadow:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(-45deg, #0974f1 0%, #9fccfa 100%);
+  transform: translate3d(0px, 0px, 0) scale(0.97);
+  filter: blur(48px);
+  opacity: var(0.75);
+  transition: opacity 0.3s;
+  border-radius: inherit;
+}
+.rainbow__shadow::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+  border-radius: inherit;
+}
+
+.background-wrapper {
+  z-index: -1;
+  height: 102%;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  position: absolute;
+  top: 0%;
+  bottom: auto;
+  left: 0%;
+  right: 0%;
+}
+.header-background {
+  z-index: 1;
+  width: 100%;
+  max-width: 1760px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: auto;
+  height: 102%;
+  right: auto;
+}
+.background-grid {
+  opacity: 0.15;
+  z-index: 0;
+  width: 100%;
+  height: 102%;
+  max-width: 1440px;
+  flex: none;
+  margin-left: auto;
+  margin-right: auto;
+  filter: blur(0.6px);
+}
+.dark .background-grid {
+  opacity: 0.1;
+  filter: invert(1);
 }

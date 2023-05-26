@@ -1,8 +1,5 @@
-import Link from "next/link"
-import { AlarmClock, BellRing, Check } from "lucide-react"
-
-import { siteConfig } from "@/config/site"
-import { Button, buttonVariants } from "@/components/ui/button"
+"use client"
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -10,25 +7,31 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
+import { siteConfig } from "@/config/site";
+import { AlarmClock, BellRing, Check } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 function ServicesComponent() {
+  const name = usePathname();
+  console.log(name);
+  
   return (
     <div id="services" className="text-center py-10">
-      <h1 className="text-xl font-extrabold tracking-tighter sm:text-2xl md:text-3xl lg:text-4xl pb-5">
-        {siteConfig.Services.title}
-      </h1>
-      <div
-        className="text-start gap-5"
-        id="grid"
-      >
+      <Link 
+          href={`${name}#${siteConfig.Services.id}`}  className="text-xl font-extrabold tracking-tighter sm:text-2xl md:text-3xl lg:text-4xl hash_parent Section__Title">
+      <span className="hash">#</span>{siteConfig.Services.title}
+      </Link>
+      <p className="mt-1 text-gray-600 dark:text-gray-400 mb-3 lg:mb-5">
+        {siteConfig.Services.subtitle}
+      </p>
+      <div className="text-start gap-5" id="grid">
         {" "}
         {siteConfig.Services.services.map((service, index) => (
           <Card
             key={index}
-            className={
-              "w-full max-w-[380px] justify-normal flex flex-col justify-between"
-            }
+            className={"w-full max-w-[380px] justify-normal flex flex-col"}
           >
             <CardHeader className="pb-3 text-center">
               <CardTitle>{service.title}</CardTitle>
@@ -107,7 +110,7 @@ function ServicesComponent() {
         ) : null}
       </div>
     </div>
-  )
+  );
 }
 
-export default ServicesComponent
+export default ServicesComponent;

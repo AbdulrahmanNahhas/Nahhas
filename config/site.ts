@@ -1,9 +1,9 @@
-export type SiteConfig = typeof siteConfig
+export type SiteConfig = typeof siteConfig;
 export const siteConfig = {
   name: "Nahhas",
   description:
     "Hello, I'm Abdulrahman Nahhas, Full-Stack developmer. Welcome to my website!",
-    projecturl: "https://github.com/AbdulrahmanNahhas/Nahhas",
+  projecturl: "https://github.com/AbdulrahmanNahhas/Nahhas",
   // Change Pages Icons in ./components/CommandDialog.tsx
   pages: [
     {
@@ -12,8 +12,8 @@ export const siteConfig = {
     },
     {
       title: "About Me",
-      href: "/about-me",
-      comingSoon: true,
+      href: "/about",
+      comingSoon: false,
     },
     {
       title: "Projects",
@@ -81,9 +81,11 @@ export const siteConfig = {
       "Hello, I'm Abdulrahman Nahhas, a student with a passion for Full-Stack development. Welcome to my website! Feel free to explore the projects page to check out all of my creations. Alternatively, you can also visit my GitHub account for more of my work. Thank you for visiting, and have a great day! Goodbye!",
   },
 
-  // Services Component
+  // Services
   Services: {
+    id: "services",
     title: "Services",
+    subtitle: "Services to help your business grow.",
     services: [
       {
         available: false,
@@ -103,4 +105,33 @@ export const siteConfig = {
       },
     ],
   },
-}
+
+  // Faqs
+  FAQs: {
+    id: "FAQs",
+    title: "FAQs",
+    subtitle: "Frequently Asked Questions",
+    questions: [
+      {
+        question: "What does the name 'Nahhas' mean?",
+        answer: "'Nahhas' is my family name, of Arabic origin. In English, it means 'COPPER.'",
+      },
+      {
+        question: "Does learning have an endpoint?",
+        answer: "The concept of 'finishing learning' is non-existent because learning is a lifelong process. Every moment brings new opportunities for acquiring knowledge and expanding our understanding.",
+      },
+      {
+        question: "I am unable to open the projects page.",
+        answer:
+          "We apologize for the inconvenience. The projects page is currently unavailable. Please check back soon to see if it has been restored.",
+      },
+    ],
+  },
+
+  // Stats
+  Stats: {
+    id: "stats",
+    title: "Stats",
+    subtitle: "Numbers tell Our Story!",
+  }
+};
