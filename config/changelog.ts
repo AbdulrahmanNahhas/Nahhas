@@ -50,4 +50,14 @@ export const changeLog = [
       changed: ["Small Bugs Has Been Fixed!"],
     },
   },
+  {
+    date: "2023-5-27",
+    description: "",
+    version: 0.155,
+    title: "Version 0.155",
+    bugs: {
+      description: "",
+      changed: ["Timeline Fixed (In About Page)"],
+    },
+  },
 ];
