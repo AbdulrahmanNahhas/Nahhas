@@ -21,7 +21,6 @@ export const generateStaticParams = async () => {
 function page(props: any) {
   const slug = props.params.slug;
   const post = getPostContent(slug);
-  console.log(post.data.hidden);
 
   return (
     <div className="bg-background/10 backdrop-blur">

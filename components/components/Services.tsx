@@ -15,7 +15,7 @@ import { usePathname } from "next/navigation";
 
 function ServicesComponent() {
   const name = usePathname();
-  console.log(name);
+  // console.log(name);
   
   return (
     <div id="services" className="text-center py-10">

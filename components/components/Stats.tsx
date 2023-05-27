@@ -13,7 +13,7 @@ import React from "react";
 
 const Stats = () => {
   const name = usePathname();
-  console.log(name);
+  // console.log(name);
 
   const Stats = [
     {

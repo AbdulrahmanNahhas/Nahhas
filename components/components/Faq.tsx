@@ -13,7 +13,7 @@ import React from "react";
 
 const Faq = () => {
   const name = usePathname();
-  console.log(name);
+  // console.log(name);
   
   return (
     <div id={siteConfig.FAQs.id} className="text-center py-10">
@@ -30,12 +30,12 @@ const Faq = () => {
       </div>
       <div>
         {siteConfig.FAQs.questions.map((question, index) => (
-          <>
+          <div key={index}>
             {index != 0 ?
             <hr className="max-w-[500px] mx-auto" />
             : null}
             <Question question={question.question} key={index} answer={question.answer} />
-          </>
+          </div>
         ))}
       </div>
     </div>

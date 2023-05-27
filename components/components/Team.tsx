@@ -11,7 +11,7 @@ import React from "react";
 
 function TeamComponent() {
   const name = usePathname();
-  console.log(name);
+  // console.log(name);
 
   return (
     <>

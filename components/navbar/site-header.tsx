@@ -1,14 +1,29 @@
-import Link from "next/link"
+"use client";
 
-import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
-import { Icons } from "@/components/icons"
-import { MainNav } from "@/components/navbar/main-nav"
-import { ThemeToggle } from "@/components/theme-toggle"
+import { Icons } from "@/components/icons";
+import { MainNav } from "@/components/navbar/main-nav";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { buttonVariants } from "@/components/ui/button";
+import { siteConfig } from "@/config/site";
+import { useMotionValueEvent, useScroll } from "framer-motion";
+import Link from "next/link";
+import { useState } from "react";
 
 export function SiteHeader() {
+  const { scrollYProgress, scrollY } = useScroll();
+  const [scroll, setScroll] = useState(0);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    // console.log("Page scroll: ", latest);
+    setScroll(latest)
+  });
+
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background text-lg">
+    <header
+      className={`sticky top-0 duration-200 z-40 w-full ${
+        scroll > 25 ? "navbar-active" : ""
+      } backdrop-blur text-lg`}
+    >
       <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
         <MainNav items={siteConfig.pages} />
         <div className="flex flex-1 items-center justify-end space-x-4">
@@ -48,5 +63,5 @@ export function SiteHeader() {
         </div>
       </div>
     </header>
-  )
+  );
 }

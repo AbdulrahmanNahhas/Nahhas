@@ -1,7 +1,7 @@
 export type changeLog = typeof changeLog;
 export const changeLog = [
   {
-    date: "2023-5-23",
+    date: "2023-05-23",
     description: "",
     version: 0.1,
     title: "Version 0.1",
@@ -19,7 +19,7 @@ export const changeLog = [
     },
   },
   {
-    date: "2023-5-24",
+    date: "2023-05-24",
     description: "",
     version: 0.12,
     title: "Version 0.12",
@@ -33,17 +33,25 @@ export const changeLog = [
     },
   },
   {
-    date: "2023-5-26",
+    date: "2023-05-26",
     description: "A lot of things changed in this version!",
     version: 0.15,
     title: "Version 0.15",
     new: {
       description: "Don't forget the website still new.",
-      changed: ["New About us page", "FAQs", "TimeLine", "Stats (Will Change Soon)"],
+      changed: [
+        "New About us page",
+        "FAQs",
+        "TimeLine",
+        "Stats (Will Change Soon)",
+      ],
     },
     improvment: {
       description: "",
-      changed: ["Changing the background (The grid is only in the hero section)", "Changing card design"],
+      changed: [
+        "Changing the background (The grid is only in the hero section)",
+        "Changing card design",
+      ],
     },
     bugs: {
       description: "",
@@ -51,13 +59,28 @@ export const changeLog = [
     },
   },
   {
-    date: "2023-5-27",
+    date: "2023-05-27",
     description: "",
     version: 0.155,
     title: "Version 0.155",
     bugs: {
       description: "",
       changed: ["Timeline Fixed (In About Page)"],
+    },
+  },
+  {
+    date: "2023-05-27",
+    description: "",
+    version: 0.175,
+    title: "Version 0.175",
+    improvment: {
+      description: "",
+      changes: [
+        "Added a border to the navbar when the user scrolls down slightly.",
+        "Simplified and reduced the number of colors in the timeline section on the About page.",
+        "Changed the background of the grid.",
+        "Updated section titles in light mode to use primary colors.",
+      ],
     },
   },
 ];

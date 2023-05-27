@@ -94,7 +94,7 @@
 .bg:before,
 .bg2::before {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   width: 100%;
@@ -114,17 +114,15 @@
     transparent,
     hsl(var(--background))
   );
-  /* z-index: -3; */
-  z-index: -4;
+  z-index: -3;
+  /* z-index: -4; */
 }
 .dark .bg::after {
   opacity: 0.1;
   filter: invert(1);
 }
 .bg::before {
-  position: absolute;
-  z-index: -4;
-  /* z-index: -3; */
+  z-index: -3;
   background: radial-gradient(
     circle,
     hsl(var(--primary) / 0.2) 0,
@@ -254,7 +252,7 @@
 }
 
 .light .Section__Title {
-  color: #e2e8f0;
+  color: hsl(var(--primary) / 0.75);
   position: relative;
   top: 18px;
   z-index: 1;
@@ -342,4 +340,9 @@
 .dark .background-grid {
   opacity: 0.1;
   filter: invert(1);
+}
+
+
+.navbar-active {
+  @apply border-b bg-background/80;
 }

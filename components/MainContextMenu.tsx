@@ -59,8 +59,8 @@ const MainContextMenu = ({ children }: MainContextMenuProps) => {
         <ContextMenuSub>
           <ContextMenuSubTrigger>Go To</ContextMenuSubTrigger>
           <ContextMenuSubContent className="w-48">
-            {siteConfig.pages.map((page) => (
-              <Link href={page.href}>
+            {siteConfig.pages.map((page, index) => (
+              <Link key={index} href={page.href}>
                 <ContextMenuItem>{page.title}</ContextMenuItem>
               </Link>
             ))}
