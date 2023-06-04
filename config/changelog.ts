@@ -83,4 +83,16 @@ export const changeLog = [
       ],
     },
   },
+  {
+    date: "2023-06-04",
+    description: "",
+    version: 0.2,
+    title: "Version 0.2",
+    improvment: {
+      description: "",
+      changes: [
+        "Changing Blog Page Design",
+      ],
+    },
+  },
 ];
