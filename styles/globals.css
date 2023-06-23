@@ -90,6 +90,12 @@
   }
 }
 
+.bg,
+.bg2 {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+}
 .bg:after,
 .bg:before,
 .bg2::before {
@@ -119,7 +125,6 @@
     hsl(var(--background))
   );
   z-index: -3;
-  /* z-index: -4; */
 }
 .dark .bg::after {
   opacity: 0.1;

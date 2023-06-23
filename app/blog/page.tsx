@@ -1,4 +1,4 @@
-import BlogCard from "@/components/Blog/Card";
+import BlogCard from "@/components/Card";
 import getPostMetadata from "@/functions/blog/getPostMetadata";
 import Link from "next/link";
 import React from "react";

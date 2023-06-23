@@ -1,6 +1,6 @@
 "use client"
-import { buttonVariants } from "../ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
+import { buttonVariants } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { teamConfig } from "@/config/team";
 import { cn } from "@/lib/utils";
 import { Github, Linkedin, Twitter } from "lucide-react";

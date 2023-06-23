@@ -1,9 +1,6 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { useRouter } from "next/navigation"
-
-import { siteConfig } from "@/config/site"
+import { SearchBox } from "./layouts/SearchBox";
 import {
   ContextMenu,
   ContextMenuCheckboxItem,
@@ -18,14 +15,17 @@ import {
   ContextMenuSubContent,
   ContextMenuSubTrigger,
   ContextMenuTrigger,
-} from "@/components/ui/context-menu"
+} from "@/components/ui/context-menu";
+import { siteConfig } from "@/config/site";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface MainContextMenuProps {
-  children?: React.ReactNode
+  children?: React.ReactNode;
 }
 
 const MainContextMenu = ({ children }: MainContextMenuProps) => {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <ContextMenu>
@@ -33,36 +33,26 @@ const MainContextMenu = ({ children }: MainContextMenuProps) => {
       <ContextMenuContent className="w-64">
         <ContextMenuItem
           onClick={() => {
-            router.back()
+            router.back();
           }}
         >
           Back
         </ContextMenuItem>
         <ContextMenuItem
           onClick={() => {
-            router.forward()
+            router.forward();
           }}
         >
           Forward
         </ContextMenuItem>
         <ContextMenuItem
           onClick={() => {
-            router.refresh()
+            router.refresh();
           }}
         >
           Reload
         </ContextMenuItem>
         <ContextMenuSeparator />
-        <ContextMenuSub>
-          <ContextMenuSubTrigger>Go To</ContextMenuSubTrigger>
-          <ContextMenuSubContent className="w-48">
-            {siteConfig.pages.map((page, index) => (
-              <Link key={index} href={page.href}>
-                <ContextMenuItem>{page.title}</ContextMenuItem>
-              </Link>
-            ))}
-          </ContextMenuSubContent>
-        </ContextMenuSub>
         <ContextMenuSub>
           <ContextMenuSubTrigger disabled className="opacity-50">
             Change Language
@@ -88,7 +78,7 @@ const MainContextMenu = ({ children }: MainContextMenuProps) => {
         </ContextMenuRadioGroup>
       </ContextMenuContent>
     </ContextMenu>
-  )
-}
+  );
+};
 
-export default MainContextMenu
+export default MainContextMenu;

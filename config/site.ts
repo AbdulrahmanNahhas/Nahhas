@@ -13,7 +13,10 @@ export const siteConfig = {
     {
       title: "About Me",
       href: "/about",
-      comingSoon: false,
+    },
+    {
+      title: "Blog",
+      href: "/blog",
     },
     {
       title: "Projects",
@@ -21,18 +24,13 @@ export const siteConfig = {
       comingSoon: true,
     },
     {
-      title: "Blog",
-      href: "/blog",
-      comingSoon: false,
+      title: "Changelog",
+      href: "/changelog",
     },
     {
       title: "Contact Us",
       href: "/contact-us",
       comingSoon: true,
-    },
-    {
-      title: "Change log",
-      href: "/changelog",
     },
   ],
   projects: [

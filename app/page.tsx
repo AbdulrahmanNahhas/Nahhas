@@ -1,13 +1,6 @@
-import MainContextMenu from "@/components/MainContextMenu";
-import BackgroundEffects from "@/components/backgroundEffects";
-import Blog from "@/components/components/Blog";
-import ClientsComponent from "@/components/components/Clients";
-import Faq from "@/components/components/Faq";
-import ProjectsComponent from "@/components/components/Projects";
-import ServicesComponent from "@/components/components/Services";
-import TeamComponent from "@/components/components/Team";
-import Footer from "@/components/footer/footer";
-import { SiteHeader } from "@/components/navbar/site-header";
+import Blog from "@/components/Blog";
+import Faq from "@/components/Faq";
+import ServicesComponent from "@/components/Services";
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import Link from "next/link";
@@ -46,21 +39,8 @@ export default function IndexPage() {
             GitHub
           </Link>
         </div>
-        <p className="text-sm text-muted-foreground text-center hidden md:block">
-          Press{" "}
-          <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-            <span className="text-xs">CTRL</span>
-          </kbd>{" "}
-          or{" "}
-          <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-            <span className="text-xs">⌘</span>
-          </kbd>{" "}
-          To open commands menu
-        </p>
       </div>
-      {/* <ClientsComponent /> */}
       <ServicesComponent />
-      {/* <ProjectsComponent /> */}
       <Blog />
       <Faq />
     </section>

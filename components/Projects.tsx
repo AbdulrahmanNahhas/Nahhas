@@ -4,7 +4,7 @@ import Image from "next/image"
 import { siteConfig } from "@/config/site"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Link from "next/link"
-import { buttonVariants } from "../ui/button"
+import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 const ProjectsComponent = () => {

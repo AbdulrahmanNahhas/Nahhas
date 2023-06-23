@@ -1,4 +1,4 @@
-import { buttonVariants } from "../ui/button";
+import { buttonVariants } from "./ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,

@@ -1,7 +1,7 @@
-import Faq from "@/components/components/Faq";
-import Stats from "@/components/components/Stats";
-import TeamComponent from "@/components/components/Team";
-import TimeLine from "@/components/components/TimeLine";
+import Faq from "@/components/Faq";
+import Stats from "@/components/Stats";
+import TeamComponent from "@/components/Team";
+import TimeLine from "@/components/TimeLine";
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import Link from "next/link";
@@ -41,17 +41,6 @@ const page = () => {
             GitHub
           </Link>
         </div>
-        <p className="text-sm text-muted-foreground text-center hidden md:block">
-          Press{" "}
-          <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-            <span className="text-xs">CTRL</span> + H
-          </kbd>{" "}
-          or{" "}
-          <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-            <span className="text-xs">⌘</span>+ H
-          </kbd>{" "}
-          To open commands modal
-        </p>
       </div>
       <TimeLine />
       <Stats />
