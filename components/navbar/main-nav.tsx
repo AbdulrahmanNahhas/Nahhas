@@ -33,8 +33,6 @@ interface MainNavProps {
 }
 
 export function MainNav({ items }: MainNavProps) {
-  const [active, setActive] = React.useState(false)
-
   return (
     <div className="flex gap-6 md:gap-10">
       <Link href="/" className="hidden items-center space-x-2 md:flex">
@@ -48,7 +46,7 @@ export function MainNav({ items }: MainNavProps) {
           <NavigationMenu className="hidden md:block">
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent">Projects</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="bg-transparent hidden">Projects</NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                     <li className="row-span-3">

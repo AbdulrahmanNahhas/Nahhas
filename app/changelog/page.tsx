@@ -17,7 +17,7 @@ const page = () => {
                 <span className="flex-auto font-semibold text-primary w-full md:w-[200px] text-2xl text-center md:text-start">
                   {changed.date}
                 </span>
-                <div className="flex flex-col gap-6 bg-background/75 backdrop-blur border-2 p-6 rounded-lg ChangeLog">
+                <div className="flex flex-col gap-6 bg-background/75 backdrop-blur border-2 p-6 rounded-lg ChangeLog md:w-[calc(100vw-220px)]">
                   <div>
                     <h4 className="text-xl font-bold text-blue-500">
                       {changed.title}

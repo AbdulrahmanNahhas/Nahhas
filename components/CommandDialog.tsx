@@ -42,7 +42,7 @@ export function CommandsDialog() {
 
   React.useEffect(() => {
     const down = (e: KeyboardEvent) => {
-      if ((e.key.toLowerCase() === "h" && (e.metaKey || e.ctrlKey))) {
+      if (((e.metaKey || e.ctrlKey))) {
         setOpen((open) => !open);
       }
     }
@@ -81,7 +81,7 @@ export function CommandsDialog() {
             {siteConfig.pages.map((Page, index) => {
               const ICON = PagesIcons[index]
               return (
-                <Link href={Page.href} key={index}>
+                <Link href={Page.comingSoon ? "" : Page.href} key={index} className={`${Page.comingSoon ? "opacity-75 cursor-not-allowed" : ""}`}>
                   <CommandItem>
                     <ICON className="mr-2 h-4 w-4" />
                     <span>{Page.title}</span>
@@ -95,7 +95,7 @@ export function CommandsDialog() {
             <CommandItem className="opacity-50 cursor-not-allowed">
               <User className="mr-2 h-4 w-4" />
               <span>Profile</span>
-              <CommandShortcut>⌘P</CommandShortcut>
+              <CommandShortcut>P</CommandShortcut>
             </CommandItem>
             <CommandItem
               className="opacity-50 cursor-not-allowed"
@@ -103,7 +103,7 @@ export function CommandsDialog() {
             >
               <Palette className="mr-2 h-4 w-4" />
               <span>Customization (Themes, Colors, ...)</span>
-              <CommandShortcut>⌘T</CommandShortcut>
+              <CommandShortcut>T</CommandShortcut>
             </CommandItem>
             <CommandItem
               className="opacity-50 cursor-not-allowed"
@@ -111,7 +111,7 @@ export function CommandsDialog() {
             >
               <Settings className="mr-2 h-4 w-4" />
               <span>Settings</span>
-              <CommandShortcut>⌘S</CommandShortcut>
+              <CommandShortcut>S</CommandShortcut>
             </CommandItem>
           </CommandGroup>
         </CommandList>

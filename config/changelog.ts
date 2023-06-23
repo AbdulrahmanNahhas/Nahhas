@@ -75,7 +75,7 @@ export const changeLog = [
     title: "Version 0.175",
     improvment: {
       description: "",
-      changes: [
+      changed: [
         "Added a border to the navbar when the user scrolls down slightly.",
         "Simplified and reduced the number of colors in the timeline section on the About page.",
         "Changed the background of the grid.",
@@ -90,7 +90,7 @@ export const changeLog = [
     title: "Version 0.2",
     improvment: {
       description: "",
-      changes: [
+      changed: [
         "Changing Blog Page Design",
       ],
     },

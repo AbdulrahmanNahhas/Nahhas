@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import MainContextMenu from "@/components/MainContextMenu";
+import BackgroundEffects from "@/components/backgroundEffects";
 import Footer from "@/components/footer/footer";
 import { SiteHeader } from "@/components/navbar/site-header";
 import { TailwindIndicator } from "@/components/tailwind-indicator";
@@ -41,21 +42,21 @@ export default function RootLayout({ children }: RootLayoutProps) {
             fontSans.variable
           )}
         >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            {/* Place Everything Here */}
-            <div className="bg"></div>
-            <div className="bg2"></div>
-            <SiteHeader />
-            <div className="relative flex min-h-screen flex-col">
-              <div className="flex-1 min-h-[calc(100vh-69px-65px)]">
-                {children}
+          <MainContextMenu>
+            <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+              <BackgroundEffects />
+              {/* Place Everything Down */}
+              <SiteHeader />
+              <div className="relative flex min-h-screen flex-col">
+                <div className="flex-1 min-h-[calc(100vh-69px-65px)]">
+                  {children}
+                </div>
+                <TailwindIndicator />
               </div>
-              <TailwindIndicator />
-            </div>
-            <Footer />
-            {/* Place Everything top */}
-            <MainContextMenu></MainContextMenu>
-          </ThemeProvider>
+              <Footer />
+              {/* Place Everything top */}
+            </ThemeProvider>
+          </MainContextMenu>
         </body>
       </html>
     </>

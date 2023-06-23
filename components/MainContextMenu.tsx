@@ -37,7 +37,6 @@ const MainContextMenu = ({ children }: MainContextMenuProps) => {
           }}
         >
           Back
-          <ContextMenuShortcut>⌘[</ContextMenuShortcut>
         </ContextMenuItem>
         <ContextMenuItem
           onClick={() => {
@@ -45,7 +44,6 @@ const MainContextMenu = ({ children }: MainContextMenuProps) => {
           }}
         >
           Forward
-          <ContextMenuShortcut>⌘]</ContextMenuShortcut>
         </ContextMenuItem>
         <ContextMenuItem
           onClick={() => {
@@ -53,7 +51,6 @@ const MainContextMenu = ({ children }: MainContextMenuProps) => {
           }}
         >
           Reload
-          <ContextMenuShortcut>⌘R</ContextMenuShortcut>
         </ContextMenuItem>
         <ContextMenuSeparator />
         <ContextMenuSub>

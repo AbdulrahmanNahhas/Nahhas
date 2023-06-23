@@ -1,14 +1,16 @@
-import Link from "next/link"
-
-import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
-
-import TeamComponent from "@/components/components/Team"
-import ServicesComponent from "@/components/components/Services"
-import ProjectsComponent from "@/components/components/Projects"
-import ClientsComponent from "@/components/components/Clients"
-import Blog from "@/components/components/Blog"
-import Faq from "@/components/components/Faq"
+import MainContextMenu from "@/components/MainContextMenu";
+import BackgroundEffects from "@/components/backgroundEffects";
+import Blog from "@/components/components/Blog";
+import ClientsComponent from "@/components/components/Clients";
+import Faq from "@/components/components/Faq";
+import ProjectsComponent from "@/components/components/Projects";
+import ServicesComponent from "@/components/components/Services";
+import TeamComponent from "@/components/components/Team";
+import Footer from "@/components/footer/footer";
+import { SiteHeader } from "@/components/navbar/site-header";
+import { buttonVariants } from "@/components/ui/button";
+import { siteConfig } from "@/config/site";
+import Link from "next/link";
 
 export default function IndexPage() {
   return (
@@ -47,13 +49,13 @@ export default function IndexPage() {
         <p className="text-sm text-muted-foreground text-center hidden md:block">
           Press{" "}
           <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-            <span className="text-xs">CTRL</span> + H
+            <span className="text-xs">CTRL</span>
           </kbd>{" "}
           or{" "}
           <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
-            <span className="text-xs">⌘</span>+ H
+            <span className="text-xs">⌘</span>
           </kbd>{" "}
-          To open commands modal
+          To open commands menu
         </p>
       </div>
       {/* <ClientsComponent /> */}
@@ -62,5 +64,5 @@ export default function IndexPage() {
       <Blog />
       <Faq />
     </section>
-  )
+  );
 }
